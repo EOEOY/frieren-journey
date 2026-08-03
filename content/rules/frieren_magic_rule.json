@@ -1,0 +1,33 @@
+{
+  "rule_id": "frieren_magic_rule",
+  "rule_name": "芙莉莲魔法规则",
+  "description": "以《葬送的芙莉莲》为蓝本的完整魔法冒险规则：六属性、魔力资源、魔法使等级（五级到一级）、人类魔法解析、魔力制限战术。",
+  "dice_system": "d20",
+  "combat_model": "hp_based",
+  "mechanics": "d20 + 属性修正 + 魔法等级加值 vs DC。20 大成功、1 大失败。魔法使等级决定可施展的魔法上限；魔力可压制（魔力制限）隐藏实力，或投入强化魔法。",
+  "attribute_points": 72,
+  "max_skills": 6,
+  "skill_point_total": 18,
+  "currency": "金币",
+  "hp_formula": "8 + con * 3",
+  "attributes": [
+    {"key": "str", "name": "体魄", "min": 3, "max": 18},
+    {"key": "dex", "name": "敏捷", "min": 3, "max": 18},
+    {"key": "con", "name": "体质", "min": 3, "max": 18},
+    {"key": "int", "name": "魔力", "min": 3, "max": 18},
+    {"key": "wis", "name": "感知", "min": 3, "max": 18},
+    {"key": "cha", "name": "魅力", "min": 3, "max": 18}
+  ],
+  "special_stats": [
+    {"key": "mana", "name": "魔力", "max": 100, "description": "施法、解析与魔力制限消耗的资源，冥想恢复。"},
+    {"key": "mage_rank", "name": "魔法使等级", "max": 5, "description": "大陆魔法协会认定：5=最低(一人前)，1=最高(全大陆约600人)。决定可施展魔法上限。"}
+  ],
+  "skills": [
+    {"key": "attack_magic", "name": "攻击魔法", "value": 0},
+    {"key": "defense_magic", "name": "防御魔法", "value": 0},
+    {"key": "healing_magic", "name": "治愈魔法", "value": 0},
+    {"key": "analysis", "name": "魔法解析", "value": 0},
+    {"key": "suppression", "name": "魔力制限", "value": 0},
+    {"key": "battle", "name": "近战", "value": 0}
+  ]
+}

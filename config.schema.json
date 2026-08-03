@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "title": "启用芙莉莲·旅途内容包",
+      "description": "启用后，本包的世界『旅途·魔法使与魔族』与规则『芙莉莲魔法规则』会出现在创建游戏界面，世界书自动灌入。",
+      "default": false,
+      "ui": {"control": "switch", "order": 10}
+    }
+  }
+}

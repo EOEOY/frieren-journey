@@ -1,0 +1,7 @@
+{
+  "id": "frieren_class_warrior",
+  "name": "战士",
+  "description": "以武艺与体魄为伴的旅人。矮人战士的徒弟、战士之村的后裔，能在魔法使抵挡魔族法术时，用斧头劈开一切障碍。",
+  "mechanics": "擅长近战与体魄；在队伍中承担正面接敌与破防。",
+  "rules": ["frieren_magic_rule"]
+}

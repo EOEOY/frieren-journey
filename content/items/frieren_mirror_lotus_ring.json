@@ -1,0 +1,8 @@
+{
+  "id": "frieren_mirror_lotus_ring",
+  "name": "镜莲花戒指",
+  "description": "勇者辛美尔送给芙莉莲的信物。花语是『永恒之爱』——他自知寿命悬殊，从未说出心意，只留下一枚永远盛开的镜莲花。",
+  "effect": "持有者在月光下能感受到温暖；对芙莉莲而言，这是她最珍贵的回忆。",
+  "keywords": ["镜莲花", "戒指", "辛美尔", "永恒之爱"],
+  "world_id": "frieren_journey_world"
+}

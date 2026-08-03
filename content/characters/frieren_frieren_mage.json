@@ -1,0 +1,20 @@
+{
+  "id": "frieren_frieren_mage",
+  "character_name": "芙莉莲",
+  "race": "精灵",
+  "class": "大魔法使",
+  "description": "活了千年以上的精灵魔法使，因葬送最多魔族而被称为『葬送的芙莉莲』。慵懒随性，却对魔法有纯粹的好奇心。勇者辛美尔离世后，她决定重新认识人类。",
+  "attributes": {"str": 10, "dex": 13, "con": 12, "int": 18, "wis": 17, "cha": 12},
+  "skills": [
+    {"name": "攻击魔法", "value": 5},
+    {"name": "魔法解析", "value": 5},
+    {"name": "魔力制限", "value": 5}
+  ],
+  "background": "千年前村庄被魔族屠灭，拜弗拉梅为师学会人类魔法与魔力制限。随勇者一行讨伐魔王，却在辛美尔死后才懂得『了解人类』的意义。现在她带着费伦与修塔尔克，向北前往魂眠之地。",
+  "equipment": [{"name": "魔法书收藏"}, {"name": "镜莲花戒指"}],
+  "gold": 120,
+  "mana": 100,
+  "mage_rank": 2,
+  "rule_id": "frieren_magic_rule",
+  "world_id": "frieren_journey_world"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "frieren_stark_warrior",
+  "character_name": "修塔尔克",
+  "race": "人类",
+  "class": "战士",
+  "description": "矮人战士艾泽的弟子，手持长柄斧。能劈开山壁、单挑讨伐红镜龙，外表可靠内心却有点胆小。为了证明自己而踏上旅程。",
+  "attributes": {"str": 17, "dex": 14, "con": 16, "int": 10, "wis": 12, "cha": 12},
+  "skills": [
+    {"name": "近战", "value": 5},
+    {"name": "防御魔法", "value": 2}
+  ],
+  "background": "来自战士之村，童年被父亲视为失败品，家乡遇袭时独自逃走让他深陷自责。加入芙莉莲的旅程后，他学会了保护别人，也慢慢原谅了自己。",
+  "equipment": [{"name": "长柄斧"}, {"name": "结实的护甲"}],
+  "gold": 30,
+  "mana": 20,
+  "mage_rank": 5,
+  "rule_id": "frieren_magic_rule",
+  "world_id": "frieren_journey_world"
+}

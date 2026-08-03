@@ -1,0 +1,7 @@
+{
+  "id": "frieren_defense_magic",
+  "name": "防御魔法",
+  "description": "六角形透明壁的防御魔法，对魔法攻击有强抗性，但物理攻击可破。是芙莉莲一脉的看家本领，也是对抗魔族法术的基础。",
+  "mechanics": "防御魔法检定成功生成护壁，抵挡魔法攻击；物理攻击可击破。",
+  "rules": ["frieren_magic_rule"]
+}

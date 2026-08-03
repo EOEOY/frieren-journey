@@ -1,0 +1,20 @@
+{
+  "id": "frieren_fern_mage",
+  "character_name": "费伦",
+  "race": "人类",
+  "class": "一级魔法使",
+  "description": "芙莉莲的头号弟子，战争孤儿出身，被僧侣海塔收养。无咏唱的魔法天才，魔力抑制技术连芙莉莲都难以察觉。说话温和却毫不留情。",
+  "attributes": {"str": 9, "dex": 14, "con": 12, "int": 17, "wis": 16, "cha": 13},
+  "skills": [
+    {"name": "攻击魔法", "value": 5},
+    {"name": "防御魔法", "value": 4},
+    {"name": "魔力制限", "value": 4}
+  ],
+  "background": "史上最年轻取得三级资格、后通过一级考试的魔法使。她看着芙莉莲的任性长大，总在背后默默照顾这个不省心的师父。她的无咏唱让她能在魔族反应过来前出手。",
+  "equipment": [{"name": "魔杖"}, {"name": "暖和的斗篷"}],
+  "gold": 60,
+  "mana": 85,
+  "mage_rank": 1,
+  "rule_id": "frieren_magic_rule",
+  "world_id": "frieren_journey_world"
+}
