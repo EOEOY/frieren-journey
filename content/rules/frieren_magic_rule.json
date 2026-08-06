@@ -29,5 +29,68 @@
     {"key": "analysis", "name": "魔法解析", "value": 0},
     {"key": "suppression", "name": "魔力制限", "value": 0},
     {"key": "battle", "name": "近战", "value": 0}
-  ]
+  ],
+  "intents": {
+    "defaults": {
+      "applies_to_dice_systems": ["d20"],
+      "zh_match": "substring",
+      "en_match": "word",
+      "case_sensitive": false,
+      "prefer_longest": true
+    },
+    "attack_magic": {
+      "aliases": {
+        "zh-CN": ["攻击魔法", "发射魔法", "进攻魔法", "攻击", "射击魔法", "释放攻击魔法", "魔力炮", "魔法攻击"],
+        "en": ["attack magic", "attack spell", "cast attack", "offensive magic", "attack"]
+      },
+      "skill_candidates": {"zh-CN": ["攻击魔法"], "en": ["attack_magic"]},
+      "default_attribute": "int",
+      "priority": 10
+    },
+    "defense_magic": {
+      "aliases": {
+        "zh-CN": ["防御魔法", "防护魔法", "防御", "抵挡魔法", "护盾魔法", "魔法屏障"],
+        "en": ["defense magic", "defensive spell", "shield magic", "barrier", "defend"]
+      },
+      "skill_candidates": {"zh-CN": ["防御魔法"], "en": ["defense_magic"]},
+      "default_attribute": "int",
+      "priority": 10
+    },
+    "healing_magic": {
+      "aliases": {
+        "zh-CN": ["治愈魔法", "治疗魔法", "疗伤", "治疗", "回复魔法", "恢复魔法", "治愈"],
+        "en": ["healing magic", "heal", "healing spell", "cure", "restore"]
+      },
+      "skill_candidates": {"zh-CN": ["治愈魔法"], "en": ["healing_magic"]},
+      "default_attribute": "int",
+      "priority": 10
+    },
+    "analysis": {
+      "aliases": {
+        "zh-CN": ["魔法解析", "解析魔法", "解析", "识破魔法", "分析魔法", "洞察魔法", "侦查魔法"],
+        "en": ["analyze magic", "analysis", "analyze spell", "study magic", "detect magic"]
+      },
+      "skill_candidates": {"zh-CN": ["魔法解析"], "en": ["analysis"]},
+      "default_attribute": "int",
+      "priority": 10
+    },
+    "suppression": {
+      "aliases": {
+        "zh-CN": ["魔力制限", "压制魔力", "魔力压制", "制限", "隐藏魔力", "收敛魔力", "压制"],
+        "en": ["suppress mana", "suppression", "mana suppression", "restrain power", "conceal mana"]
+      },
+      "skill_candidates": {"zh-CN": ["魔力制限"], "en": ["suppression"]},
+      "default_attribute": "int",
+      "priority": 10
+    },
+    "battle": {
+      "aliases": {
+        "zh-CN": ["近战", "近身战", "肉搏", "挥砍", "劈砍", "格斗", "格挡", "闪避", "战斗"],
+        "en": ["melee", "close combat", "fight", "slash", "strike", "battle", "dodge"]
+      },
+      "skill_candidates": {"zh-CN": ["近战"], "en": ["battle"]},
+      "default_attribute": "dex",
+      "priority": 10
+    }
+  }
 }
