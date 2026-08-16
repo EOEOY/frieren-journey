@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "frieren-journey",
   "name": "葬送的芙莉莲·旅途",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "以《葬送的芙莉莲》为蓝本的完整奇幻冒险规则包：魔王战后的百年旅程、魔法使等级、人类魔法、魔力制限与魔族。启用后创建游戏即可选择本世界与规则。非官方同人，版权归原作所有。",
   "plugin_type": "content-pack",
   "config_schema": "config.schema.json",
