@@ -1,41 +1,131 @@
 {
   "rule_id": "frieren_magic_rule",
+  "rule_schema_version": 2,
+  "locale_schema_version": 1,
+  "default_locale": "zh-CN",
   "rule_name": "芙莉莲魔法规则",
   "description": "以《葬送的芙莉莲》为蓝本的完整魔法冒险规则：六属性、魔力资源、魔法使等级（五级到一级）、人类魔法解析、魔力制限战术。",
   "dice_system": "d20",
   "combat_model": "hp_based",
+  "check_mechanic": {
+    "dice": "d20",
+    "comparison": "roll_plus_modifier_gte_target",
+    "critical": {
+      "success": 20,
+      "failure": 1
+    },
+    "advantage": {
+      "type": "d20_keep_high_low",
+      "allow_explicit": true,
+      "assistance_grants": "advantage"
+    }
+  },
+  "max_check_dc": 20,
   "mechanics": "d20 + 属性修正 + 魔法等级加值 vs DC。20 大成功、1 大失败。魔法使等级决定可施展的魔法上限；魔力可压制（魔力制限）隐藏实力，或投入强化魔法。",
   "attribute_points": 72,
   "max_skills": 6,
   "skill_point_total": 200,
   "max_skill_value": 80,
   "skill_mode": "narrative",
-  "skill_value_to_bonus": {"20": 1, "40": 2, "60": 3, "80": 4},
+  "skill_value_to_bonus": {
+    "20": 1,
+    "40": 2,
+    "60": 3,
+    "80": 4
+  },
   "currency": "金币",
   "hp_formula": "8 + con * 3",
   "attributes": [
-    {"key": "str", "name": "体魄", "min": 3, "max": 18},
-    {"key": "dex", "name": "敏捷", "min": 3, "max": 18},
-    {"key": "con", "name": "体质", "min": 3, "max": 18},
-    {"key": "int", "name": "魔力", "min": 3, "max": 18},
-    {"key": "wis", "name": "感知", "min": 3, "max": 18},
-    {"key": "cha", "name": "魅力", "min": 3, "max": 18}
+    {
+      "key": "str",
+      "name": "体魄",
+      "min": 3,
+      "max": 18
+    },
+    {
+      "key": "dex",
+      "name": "敏捷",
+      "min": 3,
+      "max": 18
+    },
+    {
+      "key": "con",
+      "name": "体质",
+      "min": 3,
+      "max": 18
+    },
+    {
+      "key": "int",
+      "name": "魔力",
+      "min": 3,
+      "max": 18
+    },
+    {
+      "key": "wis",
+      "name": "感知",
+      "min": 3,
+      "max": 18
+    },
+    {
+      "key": "cha",
+      "name": "魅力",
+      "min": 3,
+      "max": 18
+    }
   ],
   "special_stats": [
-    {"key": "mana", "name": "魔力", "max": 100, "initial": 100, "description": "施法、解析与魔力制限消耗的资源，冥想恢复。"},
-    {"key": "mage_rank", "name": "魔法使等级", "max": 5, "initial": 5, "description": "大陆魔法协会认定：5=最低(一人前)，1=最高(全大陆约600人)。决定可施展魔法上限。"}
+    {
+      "key": "mana",
+      "name": "魔力",
+      "max": 100,
+      "initial": 100,
+      "description": "施法、解析与魔力制限消耗的资源，冥想恢复。"
+    },
+    {
+      "key": "mage_rank",
+      "name": "魔法使等级",
+      "max": 5,
+      "initial": 5,
+      "description": "大陆魔法协会认定：5=最低(一人前)，1=最高(全大陆约600人)。决定可施展魔法上限。"
+    }
   ],
   "skills": [
-    {"key": "attack_magic", "name": "攻击魔法", "value": 0},
-    {"key": "defense_magic", "name": "防御魔法", "value": 0},
-    {"key": "healing_magic", "name": "治愈魔法", "value": 0},
-    {"key": "analysis", "name": "魔法解析", "value": 0},
-    {"key": "suppression", "name": "魔力制限", "value": 0},
-    {"key": "battle", "name": "近战", "value": 0}
+    {
+      "key": "attack_magic",
+      "name": "攻击魔法",
+      "value": 0
+    },
+    {
+      "key": "defense_magic",
+      "name": "防御魔法",
+      "value": 0
+    },
+    {
+      "key": "healing_magic",
+      "name": "治愈魔法",
+      "value": 0
+    },
+    {
+      "key": "analysis",
+      "name": "魔法解析",
+      "value": 0
+    },
+    {
+      "key": "suppression",
+      "name": "魔力制限",
+      "value": 0
+    },
+    {
+      "key": "battle",
+      "name": "近战",
+      "value": 0
+    }
   ],
   "intents": {
     "defaults": {
-      "applies_to_dice_systems": ["d20"],
+      "applies_to_dice_systems": [
+        "d20"
+      ],
       "zh_match": "substring",
       "en_match": "word",
       "case_sensitive": false,
@@ -43,55 +133,185 @@
     },
     "attack_magic": {
       "aliases": {
-        "zh-CN": ["攻击魔法", "发射魔法", "进攻魔法", "攻击", "射击魔法", "释放攻击魔法", "魔力炮", "魔法攻击"],
-        "en": ["attack magic", "attack spell", "cast attack", "offensive magic", "attack"]
+        "zh-CN": [
+          "攻击魔法",
+          "发射魔法",
+          "进攻魔法",
+          "攻击",
+          "射击魔法",
+          "释放攻击魔法",
+          "魔力炮",
+          "魔法攻击"
+        ],
+        "en": [
+          "attack magic",
+          "attack spell",
+          "cast attack",
+          "offensive magic",
+          "attack"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["攻击魔法"], "en": ["attack_magic"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "攻击魔法"
+        ],
+        "en": [
+          "attack_magic"
+        ]
+      },
       "default_attribute": "int",
       "priority": 10
     },
     "defense_magic": {
       "aliases": {
-        "zh-CN": ["防御魔法", "防护魔法", "防御", "抵挡魔法", "护盾魔法", "魔法屏障"],
-        "en": ["defense magic", "defensive spell", "shield magic", "barrier", "defend"]
+        "zh-CN": [
+          "防御魔法",
+          "防护魔法",
+          "防御",
+          "抵挡魔法",
+          "护盾魔法",
+          "魔法屏障"
+        ],
+        "en": [
+          "defense magic",
+          "defensive spell",
+          "shield magic",
+          "barrier",
+          "defend"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["防御魔法"], "en": ["defense_magic"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "防御魔法"
+        ],
+        "en": [
+          "defense_magic"
+        ]
+      },
       "default_attribute": "int",
       "priority": 10
     },
     "healing_magic": {
       "aliases": {
-        "zh-CN": ["治愈魔法", "治疗魔法", "疗伤", "治疗", "回复魔法", "恢复魔法", "治愈"],
-        "en": ["healing magic", "heal", "healing spell", "cure", "restore"]
+        "zh-CN": [
+          "治愈魔法",
+          "治疗魔法",
+          "疗伤",
+          "治疗",
+          "回复魔法",
+          "恢复魔法",
+          "治愈"
+        ],
+        "en": [
+          "healing magic",
+          "heal",
+          "healing spell",
+          "cure",
+          "restore"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["治愈魔法"], "en": ["healing_magic"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "治愈魔法"
+        ],
+        "en": [
+          "healing_magic"
+        ]
+      },
       "default_attribute": "int",
       "priority": 10
     },
     "analysis": {
       "aliases": {
-        "zh-CN": ["魔法解析", "解析魔法", "解析", "识破魔法", "分析魔法", "洞察魔法", "侦查魔法"],
-        "en": ["analyze magic", "analysis", "analyze spell", "study magic", "detect magic"]
+        "zh-CN": [
+          "魔法解析",
+          "解析魔法",
+          "解析",
+          "识破魔法",
+          "分析魔法",
+          "洞察魔法",
+          "侦查魔法"
+        ],
+        "en": [
+          "analyze magic",
+          "analysis",
+          "analyze spell",
+          "study magic",
+          "detect magic"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["魔法解析"], "en": ["analysis"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "魔法解析"
+        ],
+        "en": [
+          "analysis"
+        ]
+      },
       "default_attribute": "int",
       "priority": 10
     },
     "suppression": {
       "aliases": {
-        "zh-CN": ["魔力制限", "压制魔力", "魔力压制", "制限", "隐藏魔力", "收敛魔力", "压制"],
-        "en": ["suppress mana", "suppression", "mana suppression", "restrain power", "conceal mana"]
+        "zh-CN": [
+          "魔力制限",
+          "压制魔力",
+          "魔力压制",
+          "制限",
+          "隐藏魔力",
+          "收敛魔力",
+          "压制"
+        ],
+        "en": [
+          "suppress mana",
+          "suppression",
+          "mana suppression",
+          "restrain power",
+          "conceal mana"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["魔力制限"], "en": ["suppression"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "魔力制限"
+        ],
+        "en": [
+          "suppression"
+        ]
+      },
       "default_attribute": "int",
       "priority": 10
     },
     "battle": {
       "aliases": {
-        "zh-CN": ["近战", "近身战", "肉搏", "挥砍", "劈砍", "格斗", "格挡", "闪避", "战斗"],
-        "en": ["melee", "close combat", "fight", "slash", "strike", "battle", "dodge"]
+        "zh-CN": [
+          "近战",
+          "近身战",
+          "肉搏",
+          "挥砍",
+          "劈砍",
+          "格斗",
+          "格挡",
+          "闪避",
+          "战斗"
+        ],
+        "en": [
+          "melee",
+          "close combat",
+          "fight",
+          "slash",
+          "strike",
+          "battle",
+          "dodge"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["近战"], "en": ["battle"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "近战"
+        ],
+        "en": [
+          "battle"
+        ]
+      },
       "default_attribute": "dex",
       "priority": 10
     }
